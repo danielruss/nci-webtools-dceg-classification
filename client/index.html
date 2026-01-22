@@ -446,29 +446,64 @@
           <div class="container">
             <div class="row">
               <div class="col">
-                <h1 class="text-primary h4 mb-3">SOCAssign</h1>
-                <hr />
-                <p>
-                  SOCAssign is an application to assist expert review of the top 10 SOCcer assignments for each job description to provide an expert SOC-2010 assignment. SOCAssign will read SOCcer ouput. Before importing, the SOCcer results can be preprocessed to focus the expert review on a subset of job descriptions, such as job descriptions with SOC codes that are tied for the highest score or
-                  that had low SOCcer scores. For each job description, SOCAssign will allow the selection of up to 3 SOC-2010 codes. The codes can be selected from the SOCcer output list, from a list of all SOC-2010 codes, or manually entered. A validation check ensures that only valid SOC-2010 can be entered.
-                </p>
-                <table class="mb-3">
-                  <tbody>
-                    <tr>
-                      <td class="pe-3">
-                        <a href="files/SOCAssign.jnlp" download>SOCAssign</a>
-                      </td>
-                      <td>Run as Web Start</td>
-                    </tr>
-                    <tr>
-                      <td class="pe-3">
-                        <a href="files/SOCAssign.jar" download>Download</a>
-                      </td>
-                      <td>Run as Java Application</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p>To run SOCAssign as a Java application, double click on the downloaded SOCAssign.jar file (make sure the java executable file is in the path).</p>
+                <ul class="nav nav-tabs" id="socassignTabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="socassign-tab" data-bs-toggle="tab" data-bs-target="#socassign-og"
+                      type="button" role="tab" aria-controls="socassign-og" aria-selected="true">SOCAssign</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="socassignweb-tab" data-bs-toggle="tab" data-bs-target="#socassign-web"
+                      type="button" role="tab" aria-controls="socassign-web" aria-selected="false">SOCAssignWeb</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="socAssingTabContent">
+
+                  <div class="tab-pane py-4" id="socassign-og" role="tabpanel" aria-labelledby="socassign-tab" tabindex="0">
+                      <h1 class="text-primary h4 mb-3">SOCAssign</h1>
+                      <p>
+                      SOCAssign is an application to assist expert review of the top 10 SOCcer assignments for each job
+                      description to
+                      provide an expert SOC-2010 assignment. SOCAssign will read SOCcer ouput. Before importing, the SOCcer
+                      results
+                      can be preprocessed to focus the expert review on a subset of job descriptions, such as job descriptions
+                      with
+                      SOC codes that are tied for the highest score or
+                      that had low SOCcer scores. For each job description, SOCAssign will allow the selection of up to 3
+                      SOC-2010
+                      codes. The codes can be selected from the SOCcer output list, from a list of all SOC-2010 codes, or
+                      manually
+                      entered. A validation check ensures that only valid SOC-2010 can be entered.
+                    </p>
+                    <table class="mb-3">
+                      <tbody>
+                        <tr>
+                          <td class="pe-3">
+                            <a href="files/SOCAssign.jnlp" download>SOCAssign</a>
+                          </td>
+                          <td>Run as Web Start</td>
+                        </tr>
+                        <tr>
+                          <td class="pe-3">
+                            <a href="files/SOCAssign.jar" download>Download</a>
+                          </td>
+                          <td>Run as Java Application</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p>To run SOCAssign as a Java application, double click on the downloaded SOCAssign.jar file (make sure the
+                      java
+                      executable file is in the path).</p>
+                  </div>
+                  <div class="tab-pane active py-4" id="socassign-web" role="tabpanel" aria-labelledby="socassignweb-tab" tabindex="0">
+                    <h1 class="text-primary h4 mb-3">SOCAssignWeb</h1>
+                    <p>SOCAssignWeb is a web-based version of SOCAssign, allowing users to perform the expert review of all versions of SOCcer, SOCcerNET, and CLIPS within the browser.
+                      All data is stored locally in the browser and no data is transmitted to any server, ensuring data privacy.  However, if you
+                      clear you clear your browser data, you will lose any work.  To save your work, you can export your work as a JSON file and import it
+                      back into SOCAssignWeb later.  When you are finished, you can export your work in Microsoft Excel format, CSV, or Excel
+                    </p>
+                    <p><a href="https://danielruss.github.io/SOCAssignWeb/SOCAssignWeb.html" target="_blank">Run SOCAssignWeb</a>.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -481,6 +516,7 @@
                 <hr />
                 <h2 class="h5 fw-semibold">Links</h2>
                 <ul>
+                  <li><a href="https://danielruss.github.io/socR/" target="_blank">socR - An R package for working with soccer results</a></li>
                   <li>
                     <a href="https://www.bls.gov/soc/2010/" target="_blank" rel="noopener noreferrer">SOC 2010 System</a>
                   </li>
